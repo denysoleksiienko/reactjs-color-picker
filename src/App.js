@@ -1,7 +1,10 @@
+import { BrowserRouter as Router } from 'react-router-dom';
+import { Routes } from './routes/Routes';
+
 export const App = () => {
   return (
-    <div>
-      <h1>Color Picker</h1>
-    </div>
+    <Router>
+      <Routes />
+    </Router>
   );
 };
