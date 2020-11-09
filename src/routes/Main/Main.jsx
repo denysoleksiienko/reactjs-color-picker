@@ -1,13 +1,12 @@
-import { useHistory, useRouteMatch } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { LinkButton } from '../../components/LinkButton';
 import './Main.css';
 
 export const Main = () => {
   const history = useHistory();
-  const { url } = useRouteMatch();
 
   const handleLink = () => {
-    history.push(`${url}/colors`);
+    history.push(`/colors`);
   };
 
   return (
