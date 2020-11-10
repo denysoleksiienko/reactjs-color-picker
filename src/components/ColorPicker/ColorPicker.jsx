@@ -1,37 +1,11 @@
-import React from 'react';
+import { useColor } from '../../hooks/useColor';
 import { Button } from '../Button';
 import { Slider } from '../Slider';
+
 import './ColorPicker.css';
 
 export const ColorPicker = () => {
-  const [isSave, setIsSave] = React.useState(false);
-  const [rgba, setRgba] = React.useState({
-    red: 255,
-    green: 255,
-    blue: 255,
-    alpha: 1,
-  });
-
-  const [saveRgba, setSaveRgba] = React.useState({
-    ...rgba,
-  });
-
-  const handleChangeRgba = (event) => {
-    setIsSave(true);
-    setRgba({
-      ...rgba,
-      [event.target.name]: event.target.value,
-    });
-  };
-
-  const handleSaveRgba = () => {
-    setSaveRgba({ ...rgba });
-  };
-
-  const handleCancelRgba = () => {
-    setRgba({ ...saveRgba });
-    setIsSave(false);
-  };
+  const { isSave, rgba, saveRgba, handleChangeRgba, handleSaveRgba, handleCancelRgba } = useColor();
 
   return (
     <section>
