@@ -1,19 +1,15 @@
-import { useHistory } from 'react-router-dom';
-import { LinkButton } from '../../components/LinkButton';
+import { Link } from 'react-router-dom';
+
 import './Main.css';
 
 export const Main = () => {
-  const history = useHistory();
-
-  const handleLink = () => {
-    history.push(`/colors`);
-  };
-
   return (
     <section className="main">
       <h1>Main Page</h1>
       <div className="btn-wrap">
-        <LinkButton title="Color Picker" handleLink={handleLink} />
+        <Link to="/colors" className="btn">
+          Color Picker
+        </Link>
       </div>
     </section>
   );
