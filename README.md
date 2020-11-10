@@ -13,12 +13,10 @@
 
 ## Task:
 
-```
 The application contains 2 pages:
 
 1. Main page. It shows a link that leads to another page with color picker.
 2. Color picker page. It shows rgba colors and sliders where the user can move and select the desired color. User can save color and cancel to return to previous color.
-```
 
 ## Color picker page:
 
